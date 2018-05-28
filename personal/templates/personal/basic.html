@@ -1,0 +1,21 @@
+<!-- Extends are web pages that are gonna be present all over you web site
+    and Include are html tag/s which can be present in lot places and not
+    exactly a whole page. eg for extends: headers and footers
+    eg for includes: a p tag containing about youself or a div tag
+    containing an advertisment  -->
+{% extends "personal/header.html" %}
+
+{% block content %}
+<!-- in the for loop 'content' can vary doesn't need to be 'content' -->
+    {% for c in content %}
+    <!-- displaying the c variable -->
+    <p>{{c}}</p>
+
+    <!-- jinja if statement example -->
+        <!-- {% if c == 'hi' %}
+
+        {% else %}
+        {% endif %} -->
+    {% endfor %}        
+
+{% endblock content %}
